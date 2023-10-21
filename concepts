@@ -1,0 +1,21 @@
+Como filtrar mais linhas de planilhas diferentes com operadores lógicos AND e OR
+
+O filtro vai executar a operação em ambas as tabelas e gerar uma lista somente dos dados definidos para cada filtro.
+
+  SELECT *
+	FROM venda
+	WHERE codigo_loja = 'CL001'
+		AND matricula_vendedor = '123456222'
+
+A leitura das linhas acima fica da seguinte forma:
+
+Selecione todas as colunas da tabela venda e filtre na coluna codigo_loja o valor CL0001 e na coluna matricula_vendedor o valor 123456222. 
+
+
+  SELECT *
+	FROM venda
+	WHERE codigo_loja = 'CL002'
+		AND matricula_vendedor = '123456444'
+		OR matricula_vendedor = '123456555'
+
+  Selecione todas as colunas da tabela venda e filtre na coluna codigo_loja o valor CL0001 e na coluna matricula_vendedor os valores 123456222 ou 123456555. 
